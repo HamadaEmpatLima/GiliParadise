@@ -1,0 +1,8 @@
+E-Tourism
+> Muhammad Yusuf Auliya
+162410101138
+> Hamada Ananta Burhanuddin
+162410101136
+
+1. Untuk tampilan web silahkan buka page1.html di halaman ini
+2. Untuk tampilan mobile silahkan buka folder mobile kemudian buka mobilepage1.html
