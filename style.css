@@ -1129,3 +1129,200 @@ input[type="radio"]:checked + label span {
 
 /* Extra Large (xl) */
 @media (min-width: 1280px) { /* ... */ }
+
+
+/* Admin */
+
+.admin-container {
+  background-color: #f0fff4;
+}
+
+.admin-login-card {
+  border-color: #338B85;
+  border-width: 1.5px;
+  border-radius: 0.5rem;
+  background-color: #f7fafc;
+  color: #338B85;
+  width: 25%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.admin-login-text {
+  font-size: 1.875rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+.admin-form-text {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.admin-form-input {
+  color: #338B85;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 100;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.admin-login-btn {
+  background-color: #338B85;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.admin-booking-container {
+  color: #1a202c;
+}
+
+.admin-booking-header {
+  padding: 1rem;
+}
+
+.admin-booking-header-item {
+  color: #338B85;
+  width: 75%;
+  font-size: 1.875rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  display: flex;
+}
+
+.admin-signout {
+  font-size: 1rem;
+  color: #c53030;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
+.admin-booking-body {
+  width: 75%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.admin-booking-table {
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+.admin-booking-tr {
+  color: #338B85;
+  text-align: center;
+  border-bottom-width: 1px;
+}
+
+.admin-booking-th {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.admin-booking-td {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.admin-booking-td-center {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  justify-content: center;
+}
+
+.admin-btn-view {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #ecc94b;
+}
+
+.admin-btn-accept {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  opacity: 0.75;
+  background-color: #4299e1;
+}
+
+.admin-btn-accepted {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #4299e1;
+}
+
+.admin-btn-print {
+  font-size: 0.875rem;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #c53030;
+}
+
+.search {
+  color: #338B85;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 100;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
