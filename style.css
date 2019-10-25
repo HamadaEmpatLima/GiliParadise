@@ -988,3 +988,144 @@ input[type="radio"]:checked + label span {
 }
 
 /* Responsive Payment */
+
+/* Revs Done */
+
+.revs-container-responsive {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.revs-navbar-responsive {
+  font-size: 0.875rem;
+  color: #000;
+  text-align: center;
+
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.revs-ul {
+  font-weight: 500;
+}
+
+.revs-li-responsive {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.85rem;
+}
+
+.revs-li-active {
+  background-image: linear-gradient(to right, #338b85 0%, rgba(35, 164, 125, 0.73) 100%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 0.5rem;
+
+  font-weight: 500;
+  color: #fff;
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.revs-li-responsive a:hover {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: #edf2f7;
+}
+
+.revs-welcome-responsive {
+  color: #338B85;
+  font-size: 2.25rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.revs-welcome-bold {
+  font-weight: 700;
+}
+
+.revs-nav2-responsive {
+  color: #338B85;
+  text-align: center;
+  flex: 1 1 0%;
+  justify-content: center;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.revs-nav2-icon {
+  margin-top: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.revs-thankyou-container {
+  color: #338B85;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.revs-thankyou {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.revs-email {
+  border-color: #338B85;
+  width: 25%;
+  color: #000;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  border-width: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Responsive Revs-Done */
+
+/* Small (sm) */
+@media (min-width: 640px) {
+  .revs-navbar-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1 1 0%;
+    justify-content: center;
+  }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .revs-li-responsive {
+    display: inline;
+  }
+
+  .revs-welcome-responsive {
+    font-size: 4rem;
+  }
+
+  .revs-nav2-responsive {
+    display: flex;
+  }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) { /* ... */ }
