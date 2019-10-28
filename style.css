@@ -637,13 +637,13 @@ body {
   background-color: #f7fafc;
 }
 
-.resv-date-box {
+/* .resv-date-box {
   display: inline-flex;
   flex: 1;
   background-color: inherit;
   min-width: 0;
   justify-content: space-between;
-}
+} */
 
 .resv-person {
   width: 50%;
