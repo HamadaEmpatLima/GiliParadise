@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Order</title>
-    <meta name="author" content="name">
-    <meta name="description" content="description here">
-    <meta name="keywords" content="keywords,here">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="name">
+	<meta name="description" content="description here">
+	<meta name="keywords" content="keywords,here">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link href="../css/min.css" rel="stylesheet">
-    <link href="../css/admin.css" rel="stylesheet">
-    <!--Replace with your tailwind.css once created-->
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <!--Totally optional :) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
-        integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link href="../css/min.css" rel="stylesheet">
+	<link href="../css/admin.css" rel="stylesheet">
+
+	<!--Totally optional :) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+		integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+	<title>Orders - GiliParadise</title>
 
 </head>
 
@@ -74,8 +74,8 @@
 			</div>
 		</div>
 	</nav>
-    <!-- /Nav -->
-    
+	<!-- /Nav -->
+
     <div class="main">
         <!-- sidebar -->
         <div class="sidebar">
@@ -136,7 +136,7 @@
                                 <td>Bali</td>
                                 <td>30</td>
                                 <td>
-                                    <a href="#" class="view">View</a>
+                                    <a href="#" class="view" onclick="openModal()">View</a>
                                 <td>
                                     <a href="#" class="accept">Accept</a>
                                     <a href="#" class="cancel">Cancel</a>
@@ -150,7 +150,7 @@
                                 <td>Bali</td>
                                 <td>30</td>
                                 <td>
-                                    <a href="#" class="view">View</a>
+                                    <a href="#" class="view" onclick="openModal()">View</a>
                                 <td>
                                     <a href="#" class="accept">Accept</a>
                                     <a href="#" class="cancel">Cancel</a>
@@ -160,44 +160,79 @@
                     </table>
                 </div>
             </div>
+            <div class="more">
+                <a id="load" href="#!">View More</a>
+            </div>
         </div>
     </div>
 
+    <!-- Modal View Payment -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="title">Payment</div>
+            <div class="body">
+                <img src="../img/service-tourguide.png" height="1000" width="1000" alt="">
+            </div>
+        </div>
+    </div>
+
+	<script src="../js/jquery-3.4.1.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+    
+    <!-- modal -->
     <script>
-        /*Toggle dropdown list*/
-        function toggleDD(myDropMenu) {
-            document.getElementById(myDropMenu).classList.toggle("invisible");
+        var modal = document.getElementById('modal');
+        // function onclick
+        function openModal(){
+            $(modal).fadeIn();
         }
-        /*Filter dropdown options*/
-        function filterDD(myDropMenu, myDropMenuSearch) {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById(myDropMenuSearch);
-            filter = input.value.toUpperCase();
-            div = document.getElementById(myDropMenu);
-            a = div.getElementsByTagName("a");
-            for (i = 0; i < a.length; i++) {
-                if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    a[i].style.display = "";
-                } else {
-                    a[i].style.display = "none";
-                }
-            }
-        }
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.drop-button') && !event.target.matches('.drop-search')) {
-                var dropdowns = document.getElementsByClassName("dropdownlist");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (!openDropdown.classList.contains('invisible')) {
-                        openDropdown.classList.add('invisible');
-                    }
-                }
-            }
+        // open modal
+        $("#toggle_modal").click(function(e){
+            e.openModal();
+        });
+        //close modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                $(modal).fadeOut();
+          }
         }
     </script>
 
 
+
+
+    <!-- Ajax -->
+    <script type="text/javascript">
+        $("#load").click(function () {
+            $.getJSON(
+                'https://raw.githubusercontent.com/HamadaEmpatLima/GiliParadise/hamada/Admin%20Dashboard%20%5BWIP%5D/json/order-2.json',
+                function (data) {
+                    console.log(data);
+                    $.each(data, function (n, elem) {
+                        console.log('id ' + elem['id'] + ' - date ' + elem['date'] + ' - name ' +
+                            elem['name'] + ' - destination ' + elem['destination'] +
+                            ' - departure ' + elem['departure'] + ' - person ' + elem['person'])
+                        $('.table-data').append(`
+                <tr>
+                    <td>` + elem['id'] + `</td>
+                    <td>` + elem['date'] + `</td>
+                    <td>` + elem['name'] + `</td>
+                    <td>` + elem['destination'] + `</td>
+                    <td>` + elem['departure'] + `</td>
+                    <td>` + elem['person'] + `</td>
+                    <td>
+                    <a href="#" class="view" onclick="openModal()">View</a>
+                    <td>
+                        <a href="#" class="accept">Accept</a>
+                        <a href="#" class="cancel">Cancel</a>
+                    </td>
+                </tr>
+                `);
+                });
+                $("#load").remove();
+            });
+        });
+    </script>
 </body>
 
 </html>
