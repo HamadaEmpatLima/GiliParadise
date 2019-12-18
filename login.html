@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../resources/css/min.css">
+  <link rel="shortcut icon" href="svg/icon.ico" type="image/x-icon">
+
+  <title>Ocean Trip | Gili Paradise</title>
+
+</head>
+
+<body class="bg-green-100">
+    <a href="index.html">
+        <p class="welcome-services">Gili <span class="welcome-bold">Paradise</span></p>
+    </a>
+    <div class="login-card mx-auto bg-gray-100 px-4 py-3 w-1/4 justify-center mt-12 rounded-lg shadow-md border border-green-oc text-green-oc">
+        <p class="font-semibold text-center my-10 text-3xl">
+            LOGIN
+        </p>
+        <form action="admin/order.html">
+            <div class="text-center mb-4">
+                <input id="email" class="my-3 font-hairline text-xl px-4 py-1 text-center text-green-oc border rounded" type="email" name="email" placeholder="Email">
+                <input id="password" class="my-3 font-hairline text-xl px-4 py-1 text-center text-green-oc border rounded" type="password" name="password" placeholder="Password">
+                <button type="submit" class="font-semibold px-6 py-3 bg-green-oc text-white rounded-lg">Masuk</button>
+        </form>
+    </div>
+    <script src="../public/js/jquery-3.4.1.js"></script>
+    <!-- <script src="../public/js/main.js"></script> -->
+    <script>
+        $.fn.validasi = function () {
+    var form = this;            
+    this.on("submit", function (event) {
+        
+        event.preventDefault();
+        var email = $("input[name='email']").val();
+        var password = $("input[name='password']").val();
+
+        if (email == "" || password == "") {
+            $("#email").addClass("border-red-500");
+            $("#password").addClass("border-red-500");
+            alert("Fill the input email and password field to login");          
+            // show_error('Harap isi email dan password untuk login');
+            } else {
+            // document.location.href = "dashboard.html";
+            $(this).off("submit").trigger("submit");
+        }
+    });
+}    
+    </script>
+    <script type="text/javascript">
+        $("form").validasi();
+    </script>
+
+</body>
+</html>
