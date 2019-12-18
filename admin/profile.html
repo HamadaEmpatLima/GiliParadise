@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link href="../css/min.css" rel="stylesheet">
+  <!--Replace with your tailwind.css once created-->
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <!--Totally optional :) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+  integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+
+</head>
+
+<body class="font-sans leading-normal tracking-normal mt-12">
+  <!--Nav-->
+  <nav class="bg-white pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+    <div class="flex flex-wrap items-center">
+      <div class="content-center flex-center flex-shrink md:w-1/3 justify-center md:justify-start text-white">
+        <a href="#">
+          <span class="text-black font-bold font-light text-xl">Admin</span>
+        </a>
+      </div>
+      <div class="flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2">
+        <span class="relative w-full">
+          <input type="search" placeholder="Search"
+          class="w-full bg-white text-sm text-black transition border border-transparent focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+          <div class="absolute search-icon" style="top: .5rem; left: .8rem;">
+            <svg class="fill-current pointer-events-none text-black w-4 h-4"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+            d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
+          </path>
+        </svg>
+      </div>
+    </span>
+  </div>
+  <div class="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
+    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+      <li class="flex-1 md:flex-none md:mr-3">
+        <a class="inline-block py-2 px-4 text-black no-underline" href="#">Active</a>
+      </li>
+      <li class="flex-1 md:flex-none md:mr-3">
+        <a class="inline-block text-gray-600 no-underline hover:text-black hover:text-underline py-2 px-4"
+        href="#">link</a>
+      </li>
+      <li class="flex-1 md:flex-none md:mr-3">
+        <div class="relative inline-block">
+          <button onclick="toggleDD('myDropdown')" class="drop-button text-black focus:outline-none">
+            <span class="pr-2"><i class="em em-robot_face"></i></span> Hi, User <svg
+            class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path
+            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg></button>
+          <div id="myDropdown"
+          class="dropdownlist absolute bg-gray-900 text-white right-0 mt-3 p-3 overflow-auto z-30 invisible w-32">
+          <a href="#"
+          class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block">
+          <i class="fas fa-sign-out-alt fa-fw"></i> Log Out
+        </a>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="flex flex-col md:flex-row">
+  <div class="bg-white h-screen fixed bottom-0  md:relative z-10 w-full md:w-48">
+    <div class="pt-16 md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
+      <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 text-center md:text-left">
+        <li class="flex-1">
+          <a href="#" class="block py-1 md:py-3 pl-1 align-middle no-underline bg-green-600 text-white">
+            <div class="px-4">
+              <i class="fa fa-user pr-0 md:pr-3"></i><span
+              class="pb-1 md:pb-0 text-xs md:text-base block md:inline-block">Profile</span>
+            </div>
+          </a>
+        </li>
+        <li class="flex-1">
+          <a href="destination.html"
+          class="block py-1 md:py-3 pl-1 align-middle no-underline hover:bg-green-200">
+          <div class="px-4">
+            <i class="fa fa-map-marker pr-0 md:pr-3 "></i><span
+            class="pb-1 md:pb-0 text-xs md:text-base block md:inline-block">Destinations</span>
+          </div>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a href="order.html" class="block py-1 md:py-3 pl-1 align-middle no-underline hover:bg-green-200">
+          <div class="px-4">
+            <i class="fa fa-envelope pr-0 md:pr-3"></i><span
+            class="pb-1 md:pb-0 text-xs md:text-base block md:inline-block">Order</span>
+          </div>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a href="reports.html"
+        class="block py-1 md:py-3 pl-1 align-middle no-underline hover:bg-green-200">
+        <div class="px-4">
+          <i class="fa fa-chart-area pr-0 md:pr-3"></i><span
+          class="pb-1 md:pb-0 text-xs md:text-base block md:inline-block">Reports</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+
+<div class="main-content flex-1 bg-green-100 mt-12 md:mt-2 pb-24 md:pb-5">
+  <div class="bg-green-600 p-2 shadow text-2xl text-white text-center py-4">
+    <h3 class="font-bold pl-2">Profile</h3>
+  </div>
+  <div class="flex flex-row flex-wrap flex-grow mt-2">
+    <div class="w-3/4 p-3 ml-5">
+      <!--Graph Card-->
+      <form class="w-full max-w-lg">
+        <div class="flex flex-wrap -mx-3 mt-5 ml-5">
+          <section class="w-1/3">
+            <div class="w-32 h-32 relative mb-4">
+              <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+                <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
+                <img src="https://avatars2.githubusercontent.com/u/40531610?s=460&v=4" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden" />
+              </div>
+            </div>
+          </section>
+          <div class="w-2/3 md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+              First Name
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" value="Hamada">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              Last Name
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" value="EmpatLima">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              Password
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-5 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+            <button class="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded modal-open">
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!--/Graph Card-->
+  </div>
+
+  <!--Modal-->
+  <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+
+      <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+        </svg>
+        <span class="text-sm">(Esc)</span>
+      </div>
+
+      <!-- Add margin if you want to see some of the overlay behind the modal-->
+      <div class="modal-content py-4 text-left px-6">
+        <!--Title-->
+        <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">Edit Profile</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!--Body-->
+        <form class="w-full max-w-lg">
+          <div class="flex flex-wrap -mx-3 mt-5 ml-5">
+            <section class="w-1/3">
+              <div class="w-32 h-32 relative mb-4">
+                <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+                  <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
+                  <img src="https://avatars2.githubusercontent.com/u/40531610?s=460&v=4" alt="lovely avatar" class="object-cover object-center w-full h-full visible group-hover:hidden change-avatar" />
+                </div>
+              </div>
+              <div class="w-full px-3 file--upload">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold text-center mb-2 file--upload" for="upload_image">
+                  Ubah Gambar
+                </label>
+                <button type="button" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white for-upload-btn">
+                  Choose
+                </button>
+                <input class="hidden for-upload-input" id="upload_image" value="Choose File" type="file" accept="image/*">
+              </div>
+            </section>
+            <div class="w-2/3 md:w-1/2 px-3 mb-6 md:mb-0">
+
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                First Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" value="Hamada">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                Last Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" value="EmpatLima">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Password
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-5 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!--Footer-->
+      <div class="flex justify-end pt-2">
+        <button class="w-1/2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent modal-close">
+          Cancel
+        </button>
+        <button class="w-1/2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent">
+          Save
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="main.js"></script>
+
+<script>
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('.change-avatar').attr('src', e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
+
+<script>
+$('.for-upload-btn').click(function() {
+  $('.for-upload-input').click();
+  $('.for-upload-input').change(function () {
+    readURL(this);
+  });
+});
+</script>
+
+<!-- Preview Gambar -->
+
+
+
+<script>
+var openmodal = document.querySelectorAll('.modal-open')
+for (var i = 0; i < openmodal.length; i++) {
+  openmodal[i].addEventListener('click', function(event){
+    event.preventDefault()
+    toggleModal()
+  })
+}
+
+const overlay = document.querySelector('.modal-overlay')
+overlay.addEventListener('click', toggleModal)
+
+var closemodal = document.querySelectorAll('.modal-close')
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener('click', toggleModal)
+}
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event
+  var isEscape = false
+  if ("key" in evt) {
+    isEscape = (evt.key === "Escape" || evt.key === "Esc")
+  } else {
+    isEscape = (evt.keyCode === 27)
+  }
+  if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal()
+  }
+};
+
+
+function toggleModal () {
+  const body = document.querySelector('body')
+  const modal = document.querySelector('.modal')
+  modal.classList.toggle('opacity-0')
+  modal.classList.toggle('pointer-events-none')
+  body.classList.toggle('modal-active')
+}
+</script>
+
+<script>
+/*Toggle dropdown list*/
+function toggleDD(myDropMenu) {
+  document.getElementById(myDropMenu).classList.toggle("invisible");
+}
+/*Filter dropdown options*/
+function filterDD(myDropMenu, myDropMenuSearch) {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById(myDropMenuSearch);
+  filter = input.value.toUpperCase();
+  div = document.getElementById(myDropMenu);
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.drop-button') && !event.target.matches('.drop-search')) {
+    var dropdowns = document.getElementsByClassName("dropdownlist");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (!openDropdown.classList.contains('invisible')) {
+        openDropdown.classList.add('invisible');
+      }
+    }
+  }
+}
+</script>
+
+
+</body>
+
+</html>
